@@ -1,0 +1,213 @@
+/* Подключаем шрифт из файла */
+
+@font-face {
+	font-family: 'Proxima Nova Rg';
+	src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'), url('../fonts/ProximaNova-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Подключаем шрифт через плагин GoogleFonts */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,italic&display=swap&subset=cyrillic-ext);
+/* Стили обнуления */
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a, a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+body {
+	color: #000;
+	line-height: 1;
+	font-family: Montserrat, serif;
+	font-weight: 400;
+}
+
+/* --------------- */
+
+.header {
+	padding: 30px;
+}
+
+.logo {
+	padding: 30px;
+	margin: 0px 0px 20px 0px;
+	/* Задаем тень svg-объекту неправильной формы */
+	filter: drop-shadow(10px -10px 20px rgba(216, 133, 38, 0.63));
+}
+
+.title {
+	font-family: "Proxima Nova Rg";
+	font-weight: 700;
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	color: rgb(38, 21, 194);
+	text-shadow: 10px 10px 15px rgba(230, 205, 67, 0.788), 10px -10px 15px rgba(31, 170, 77, 0.534);
+	margin: 0px 0px 40px 0px;
+}
+
+.menu {
+	max-width: 600px;
+	/* Центрируем блок и задаем нижний отступ 30px */
+	margin: 0 auto 30px;
+	/* Избавляемся от фантомных отступов, задав родительскому блоку ul нулевой размер шрифта */
+	font-size: 0;
+}
+
+.menu li {
+	display: inline-block;
+	text-align: center;
+	/* Задаем ширины для li 20% от родительского блока ul.menu, а также боковые внешние отступы для них 2.5%*/
+	width: 20%;
+	margin: 0 2.5%;
+}
+
+.menu__link {
+	display: inline-block;
+	width: 100%;
+	background-color: rgba(111, 190, 111, 0.397);
+	padding: 10px 15px;
+	border: 1px solid rgb(238, 235, 51);
+	/* Закругляем правый нижний угол границы */
+	border-radius: 0px 0px 15px 0px;
+	/* Задаем тени снаружи и внутри */
+	box-shadow: -15px 10px 10px rgba(173, 33, 29, 0.61), inset 5px -5px 5px #fdae32;
+	font-size: 20px;
+	font-style: italic;
+	color: #194bb8;
+}
+
+.block {
+	padding: 20px;
+	border: 5px dashed #aef34f;
+	border-radius: 20px 0 20px 0;
+	max-width: 900px;
+	margin: 0 auto 20px;
+	background-color: rgba(94, 235, 235, 0.322);
+	box-shadow: 10px -5px 10px rgba(94, 235, 235, 0.322);
+}
+
+.subtitle {
+	text-transform: capitalize;
+	font-family: "Proxima Nova Rg";
+	font-size: 25px;
+	color: #45068d;
+	padding: 30px;
+	text-shadow: -10px -10px 10px #fdae32, 10px 10px 10px #45068d;
+	text-align: center;
+}
+
+.img {
+	max-width: 240px;
+	padding: 20px;
+	/* Задаем изображению круглые границы */
+	border-radius: 50%;
+	float: left;
+}
+
+.text {
+	font-size: 20px;
+	text-align: justify;
+	text-decoration: underline;
+	color: #45068d;
+	text-shadow: 5px -5px 5px #aef34f;
+}
+
+.text img {
+	max-width: 240px;
+	padding: 20px;
+	border-radius: 50%;
+	float: right;
+}
+
+.text span {
+	color: rgb(230, 15, 15);
+	display: inline-block;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+.content {
+	margin: 0px 0px 30px 20px;
+	padding: 15px 15px 15px 15px;
+	max-width: 700px;
+	height: 400px;
+	outline: 5px dotted #45068d;
+	overflow: auto;
+}
+
+.content h2 {
+	text-transform: uppercase;
+	font-family: "Proxima Nova Rg";
+	font-size: 25px;
+	color: #ee4f05;
+	padding: 30px;
+	text-shadow: -10px -10px 10px #2cf01a, 10px 10px 10px #e444c1;
+	text-align: center;
+}
+
+.content p {
+	text-align: justify;
+	font-size: 20px;
+}
+
+.content p img {
+	max-width: 240px;
+	padding: 0px 20px 20px 0px;
+	float: left;
+}
+
+#img {
+	float: right;
+	padding: 20px 0px 20px 20px;
+}
+
+.footer {
+	padding: 20px 0;
+}
+
+.button {
+	font-family: "Proxima Nova Rg";
+	font-size: 25px;
+	color: #fff;
+	display: block;
+	background-color: rgb(67, 20, 240);
+	padding: 15px 10px;
+	line-height: 30px;
+	max-width: 300px;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 5px 25px 5px 25px;
+	margin: 0 auto 20px;
+	box-shadow: 15px 15px 10px #45068d;
+}
+
+.copy {
+	text-align: right;
+}
